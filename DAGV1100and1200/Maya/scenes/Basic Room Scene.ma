@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Basic Room Scene.ma
-//Last modified: Tue, Sep 16, 2025 09:36:56 PM
+//Last modified: Tue, Sep 16, 2025 09:38:28 PM
 //Codeset: 1252
 requires maya "2026";
 requires "stereoCamera" "10.0";
@@ -13,13 +13,13 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202505131231-aff5f20443";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "B3043E57-4CC7-20DE-C0E8-6E81EDD06FBF";
+fileInfo "UUID" "0B634961-42DF-9A77-02EC-0E9809FBE1B1";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "01BBAC29-438C-9707-5DAA-9084892627C9";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -27.835645263810751 18.018834212619858 30.956441360934491 ;
-	setAttr ".r" -type "double3" -19.200000000001644 677.39999999976851 1.0802089619456604e-15 ;
+	setAttr ".t" -type "double3" -10.291309799796931 -12.182098078680376 40.761639032349848 ;
+	setAttr ".r" -type "double3" 19.199999999995768 704.19999999976301 -4.1318010872481638e-16 ;
 	setAttr ".rpt" -type "double3" 1.6605468703651163e-16 5.1472767281299083e-17 5.9716867932489998e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "9498C044-4DED-0FED-49F9-FDA0E22808D8";
@@ -4264,7 +4264,7 @@ createNode mesh -n "Wall_FloorShape2" -p "Wall_Floor2";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "Chair";
 	rename -uid "0642F3E2-4F3A-8EFB-5BA0-46B762E073AD";
-	setAttr ".t" -type "double3" 1.4419397574468911 -13.709802991215954 5.9795370851016871 ;
+	setAttr ".t" -type "double3" 1.3485147241752098 -13.709802991215952 6.0323610637413241 ;
 	setAttr ".r" -type "double3" 0 209.48449858688033 0 ;
 	setAttr ".s" -type "double3" 0.55581526527565306 0.55581526527565306 0.55581526527565306 ;
 	setAttr ".rp" -type "double3" 0.73053113595315189 16.072048858604873 0 ;
