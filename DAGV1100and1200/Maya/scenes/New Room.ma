@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: New Room.ma
-//Last modified: Wed, Sep 24, 2025 01:27:37 PM
+//Last modified: Wed, Sep 24, 2025 01:29:07 PM
 //Codeset: 1252
 file -rdi 1 -ns "Basic_Room_BedFrame" -rfn "Basic_Room_BedFrameRN" -op "v=0;"
 		 -typ "mayaAscii" "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//assets/Basic_Room_BedFrame.ma";
@@ -46,17 +46,17 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202505131231-aff5f20443";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "9DA5AE52-4131-0C73-6767-DFA3889433FA";
+fileInfo "UUID" "C16E32A0-4167-4C8E-326C-EE9EACD1610C";
 createNode transform -s -n "persp";
 	rename -uid "2983C934-4FD6-4C07-5100-5FB5C4946C22";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 31.927055589993998 1.295439867653881 0.77443498642893704 ;
-	setAttr ".r" -type "double3" 0.86164727051392198 77.40000000000019 -2.2781437820266942e-16 ;
+	setAttr ".t" -type "double3" 4.044732996260902 1.9247671450469315 -8.6880755327904584 ;
+	setAttr ".r" -type "double3" -7.5383527294711659 -270.1999999999764 -2.2779091231854256e-13 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "17A65E08-49A0-8B34-061E-70BB61F38D7E";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 39.559978814734862;
+	setAttr ".coi" 10.886194105367707;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -197,7 +197,11 @@ createNode reference -n "Basic_Room_BedFrameRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Basic_Room_BedFrameRN"
 		"Basic_Room_BedFrameRN" 0
-		"Basic_Room_BedFrameRN" 12
+		"Basic_Room_BedFrameRN" 14
+		2 "|Basic_Room_BedFrame:Matress|Basic_Room_BedFrame:polySurface54" "translate" 
+		" -type \"double3\" -10.58429695452036867 -0.13477804479178479 0"
+		2 "|Basic_Room_BedFrame:Matress|Basic_Room_BedFrame:polySurface54" "translateY" 
+		" -av"
 		2 "|Basic_Room_BedFrame:Matress|Basic_Room_BedFrame:polySurface54" "rotatePivot" 
 		" -type \"double3\" 8.58840110279906455 0.11840644996153638 -9.70858271800991446"
 		
@@ -233,7 +237,7 @@ createNode reference -n "Basic_Room_MatressRN";
 		"Basic_Room_MatressRN" 0
 		"Basic_Room_MatressRN" 1
 		2 "|Basic_Room_Matress:Matress|Basic_Room_Matress:polySurface41" "translate" 
-		" -type \"double3\" -10.58429695452036867 -0.012780117447073636 0";
+		" -type \"double3\" -10.58429695452036867 -0.14755816223885843 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "Basic_Room_DeskRN";
