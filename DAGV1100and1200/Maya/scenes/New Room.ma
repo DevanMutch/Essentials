@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: New Room.ma
-//Last modified: Wed, Sep 24, 2025 01:05:44 PM
+//Last modified: Wed, Sep 24, 2025 01:27:37 PM
 //Codeset: 1252
 file -rdi 1 -ns "Basic_Room_BedFrame" -rfn "Basic_Room_BedFrameRN" -op "v=0;"
 		 -typ "mayaAscii" "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//assets/Basic_Room_BedFrame.ma";
@@ -46,21 +46,21 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202505131231-aff5f20443";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "2F721B91-4F6A-4109-8FC0-A7B1C3694C02";
+fileInfo "UUID" "9DA5AE52-4131-0C73-6767-DFA3889433FA";
 createNode transform -s -n "persp";
 	rename -uid "2983C934-4FD6-4C07-5100-5FB5C4946C22";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -5.0992650737273593 1.7100201490315623 24.019752947088342 ;
-	setAttr ".r" -type "double3" 9.2616472705292523 18.200000000000685 -2.092531746301717e-16 ;
+	setAttr ".t" -type "double3" 31.927055589993998 1.295439867653881 0.77443498642893704 ;
+	setAttr ".r" -type "double3" 0.86164727051392198 77.40000000000019 -2.2781437820266942e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "17A65E08-49A0-8B34-061E-70BB61F38D7E";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 20.230231431334502;
+	setAttr ".coi" 39.559978814734862;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 7.6616504192352295 2.7148521772930767 2.3045591115951538 ;
+	setAttr ".tp" -type "double3" -6.6758252324761393 1.8903434231051626 -7.8543311935155238 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "EA3A2E52-492E-81D1-FE96-2D9416787515";
@@ -113,20 +113,20 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "A69FE4C4-46E3-858C-9BFF-3DB25DC905BC";
+	rename -uid "64AEEB1A-46D6-818A-9FBA-CFAF9F12EE77";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "02726374-4EF6-773F-378D-DBA2C414B3CD";
+	rename -uid "0C773056-4568-4D0D-2D34-2E9BF321BD4E";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "AA4DF034-48F9-75C7-4FBA-A2A677C02E16";
+	rename -uid "BCC1DD5D-4FB5-33BF-D50E-A2BE37FDF0FB";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "2AB0A7C2-404A-DA8B-EB23-5DB206E0B247";
+	rename -uid "CC95FD1E-4247-D53F-9513-A2B4672CF307";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "B6BCDF63-45F1-EE5B-DB1F-F4B7E70B8739";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "AB78E20B-4146-0E50-9142-09B502F8FF28";
+	rename -uid "1D8913FC-43A3-559D-69F9-DD9EC3712CE2";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "D9006273-47E3-1CD7-A1B5-4BB19D5F62DE";
 	setAttr ".g" yes;
@@ -197,11 +197,7 @@ createNode reference -n "Basic_Room_BedFrameRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Basic_Room_BedFrameRN"
 		"Basic_Room_BedFrameRN" 0
-		"Basic_Room_BedFrameRN" 14
-		2 "|Basic_Room_BedFrame:Matress|Basic_Room_BedFrame:polySurface54" "translate" 
-		" -type \"double3\" -10.58429695452036867 -0.13311874679413693 0"
-		2 "|Basic_Room_BedFrame:Matress|Basic_Room_BedFrame:polySurface54" "translateY" 
-		" -av"
+		"Basic_Room_BedFrameRN" 12
 		2 "|Basic_Room_BedFrame:Matress|Basic_Room_BedFrame:polySurface54" "rotatePivot" 
 		" -type \"double3\" 8.58840110279906455 0.11840644996153638 -9.70858271800991446"
 		
@@ -237,7 +233,7 @@ createNode reference -n "Basic_Room_MatressRN";
 		"Basic_Room_MatressRN" 0
 		"Basic_Room_MatressRN" 1
 		2 "|Basic_Room_Matress:Matress|Basic_Room_Matress:polySurface41" "translate" 
-		" -type \"double3\" -10.58429695452036867 -0.20792028157897446 0";
+		" -type \"double3\" -10.58429695452036867 -0.012780117447073636 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "Basic_Room_DeskRN";
@@ -314,29 +310,24 @@ createNode reference -n "Basic_Room_BookShelfRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Basic_Room_BookShelfRN"
 		"Basic_Room_BookShelfRN" 0
-		"Basic_Room_BookShelfRN" 17
-		2 "|Basic_Room_BookShelf:BookShelf" "translate" " -type \"double3\" 0.096795521222526631 -0.13402347175169571 -7.53519024506584056"
-		
-		2 "|Basic_Room_BookShelf:BookShelf" "translateX" " -av"
-		2 "|Basic_Room_BookShelf:BookShelf" "translateZ" " -av"
-		2 "|Basic_Room_BookShelf:BookShelf" "translateY" " -av"
+		"Basic_Room_BookShelfRN" 13
 		2 "|Basic_Room_BookShelf:BookShelf" "rotatePivot" " -type \"double3\" 8.63952012553812132 0.13402347175169571 -4.09243059158325195"
 		
 		2 "|Basic_Room_BookShelf:BookShelf" "rotatePivotTranslate" " -type \"double3\" -0.58281805053116997 0 -0.5903528973909733"
 		
 		2 "|Basic_Room_BookShelf:BookShelf" "scalePivot" " -type \"double3\" 8.63952012553812132 0.13402347175169571 -4.09243059158325195"
 		
-		5 4 "Basic_Room_BookShelfRN" "|Basic_Room_BookShelf:BookShelf.rotateY" 
-		"Basic_Room_BookShelfRN.placeHolderList[1]" ""
-		5 4 "Basic_Room_BookShelfRN" "|Basic_Room_BookShelf:BookShelf.rotateX" 
-		"Basic_Room_BookShelfRN.placeHolderList[2]" ""
-		5 4 "Basic_Room_BookShelfRN" "|Basic_Room_BookShelf:BookShelf.rotateZ" 
-		"Basic_Room_BookShelfRN.placeHolderList[3]" ""
 		5 4 "Basic_Room_BookShelfRN" "|Basic_Room_BookShelf:BookShelf.translateX" 
-		"Basic_Room_BookShelfRN.placeHolderList[4]" ""
-		5 4 "Basic_Room_BookShelfRN" "|Basic_Room_BookShelf:BookShelf.translateZ" 
-		"Basic_Room_BookShelfRN.placeHolderList[5]" ""
+		"Basic_Room_BookShelfRN.placeHolderList[1]" ""
 		5 4 "Basic_Room_BookShelfRN" "|Basic_Room_BookShelf:BookShelf.translateY" 
+		"Basic_Room_BookShelfRN.placeHolderList[2]" ""
+		5 4 "Basic_Room_BookShelfRN" "|Basic_Room_BookShelf:BookShelf.translateZ" 
+		"Basic_Room_BookShelfRN.placeHolderList[3]" ""
+		5 4 "Basic_Room_BookShelfRN" "|Basic_Room_BookShelf:BookShelf.rotateY" 
+		"Basic_Room_BookShelfRN.placeHolderList[4]" ""
+		5 4 "Basic_Room_BookShelfRN" "|Basic_Room_BookShelf:BookShelf.rotateX" 
+		"Basic_Room_BookShelfRN.placeHolderList[5]" ""
+		5 4 "Basic_Room_BookShelfRN" "|Basic_Room_BookShelf:BookShelf.rotateZ" 
 		"Basic_Room_BookShelfRN.placeHolderList[6]" ""
 		5 4 "Basic_Room_BookShelfRN" "|Basic_Room_BookShelf:BookShelf.visibility" 
 		"Basic_Room_BookShelfRN.placeHolderList[7]" ""
@@ -417,7 +408,7 @@ createNode animCurveTA -n "BookShelf_rotateY";
 	rename -uid "3CA3528E-4F88-A8EA-64F3-B89B2AA71283";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 89.264030550489863;
+	setAttr ".ktv[0]"  1 89.264030550489878;
 createNode animCurveTA -n "BookShelf_rotateZ";
 	rename -uid "7EA8DE0E-417E-9713-86B1-ACBEB559E6BE";
 	setAttr ".tan" 18;
@@ -507,7 +498,7 @@ select -ne :defaultShaderList1;
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
-	setAttr -s 3 ".r";
+	setAttr -s 4 ".r";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
@@ -515,9 +506,9 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 22 ".dsm";
+	setAttr -s 21 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 15 ".gn";
+	setAttr -s 14 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
@@ -548,12 +539,12 @@ connectAttr "polySurface54_rotateZ.o" "Basic_Room_BedFrameRN.phl[7]";
 connectAttr "polySurface54_scaleX.o" "Basic_Room_BedFrameRN.phl[8]";
 connectAttr "polySurface54_scaleY.o" "Basic_Room_BedFrameRN.phl[9]";
 connectAttr "polySurface54_scaleZ.o" "Basic_Room_BedFrameRN.phl[10]";
-connectAttr "BookShelf_rotateY.o" "Basic_Room_BookShelfRN.phl[1]";
-connectAttr "BookShelf_rotateX.o" "Basic_Room_BookShelfRN.phl[2]";
-connectAttr "BookShelf_rotateZ.o" "Basic_Room_BookShelfRN.phl[3]";
-connectAttr "BookShelf_translateX.o" "Basic_Room_BookShelfRN.phl[4]";
-connectAttr "BookShelf_translateZ.o" "Basic_Room_BookShelfRN.phl[5]";
-connectAttr "BookShelf_translateY.o" "Basic_Room_BookShelfRN.phl[6]";
+connectAttr "BookShelf_translateX.o" "Basic_Room_BookShelfRN.phl[1]";
+connectAttr "BookShelf_translateY.o" "Basic_Room_BookShelfRN.phl[2]";
+connectAttr "BookShelf_translateZ.o" "Basic_Room_BookShelfRN.phl[3]";
+connectAttr "BookShelf_rotateY.o" "Basic_Room_BookShelfRN.phl[4]";
+connectAttr "BookShelf_rotateX.o" "Basic_Room_BookShelfRN.phl[5]";
+connectAttr "BookShelf_rotateZ.o" "Basic_Room_BookShelfRN.phl[6]";
 connectAttr "BookShelf_visibility.o" "Basic_Room_BookShelfRN.phl[7]";
 connectAttr "BookShelf_scaleX.o" "Basic_Room_BookShelfRN.phl[8]";
 connectAttr "BookShelf_scaleY.o" "Basic_Room_BookShelfRN.phl[9]";
