@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: New Room.ma
-//Last modified: Tue, Sep 23, 2025 09:52:28 PM
+//Last modified: Wed, Sep 24, 2025 12:32:49 PM
 //Codeset: 1252
 file -rdi 1 -ns "Basic_Room_BedFrame" -rfn "Basic_Room_BedFrameRN" -op "v=0;"
 		 -typ "mayaAscii" "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//assets/Basic_Room_BedFrame.ma";
@@ -37,26 +37,28 @@ file -r -ns "Basic_Room_Chair" -dr 1 -rfn "Basic_Room_ChairRN" -op "v=0;" -typ "
 requires maya "2026";
 requires "stereoCamera" "10.0";
 requires "mtoa" "5.5.2";
+requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202505131231-aff5f20443";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "EA866223-4D18-B7A2-ADB7-90AF8CC3D816";
+fileInfo "UUID" "AD9C75C6-4235-744F-2C4D-DFAF11D88F6F";
 createNode transform -s -n "persp";
 	rename -uid "2983C934-4FD6-4C07-5100-5FB5C4946C22";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -24.783973214134413 6.1184105258255048 -4.4462105441492312 ;
-	setAttr ".r" -type "double3" -5.138352729623298 -99.399999999982469 0 ;
+	setAttr ".t" -type "double3" -21.732639476981298 28.472520516071505 39.933056360636684 ;
+	setAttr ".r" -type "double3" -28.538352729598735 -38.599999999958108 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "17A65E08-49A0-8B34-061E-70BB61F38D7E";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 26.4184286400817;
+	setAttr ".coi" 51.122678137998008;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
+	setAttr ".tp" -type "double3" 7.6616504192352295 2.7148521772930767 2.3045591115951538 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "EA3A2E52-492E-81D1-FE96-2D9416787515";
@@ -109,20 +111,20 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "0F6454B1-436E-AE76-F914-8AA3A3F8F1A6";
+	rename -uid "E29DDF84-4BE3-C112-63A3-16807F7AE937";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "3FE9BC2D-4E08-1ABB-BE6A-EDA8182FF9E5";
+	rename -uid "D90C6C7E-444B-B28D-B838-BAADB76D796E";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "478357BD-43B5-3F40-F70D-CAAF7516E7DB";
+	rename -uid "67E02F27-4BCE-4350-2056-918EBC30E42E";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "720C0AF6-40D5-4B21-13A8-34806B93B29B";
+	rename -uid "9A9895D5-43C1-4917-A639-F9BD440214AD";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "B6BCDF63-45F1-EE5B-DB1F-F4B7E70B8739";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "28FE06AA-4CE9-8554-421A-5BB4FFA30DA4";
+	rename -uid "D4EE3E3F-40ED-070D-D87A-D8AD0E4095BF";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "D9006273-47E3-1CD7-A1B5-4BB19D5F62DE";
 	setAttr ".g" yes;
@@ -202,7 +204,13 @@ createNode reference -n "Basic_Room_MushroomRN";
 	rename -uid "DCA16728-4693-16D7-AB8C-D9A1AD23F53C";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Basic_Room_MushroomRN"
-		"Basic_Room_MushroomRN" 0;
+		"Basic_Room_MushroomRN" 0
+		"Basic_Room_MushroomRN" 3
+		2 "|Basic_Room_Mushroom:Mushroom" "translate" " -type \"double3\" 0 -2.87066948184099946 0"
+		
+		2 "|Basic_Room_Mushroom:Mushroom" "rotatePivot" " -type \"double3\" 7.66165041923522949 5.28484455427430611 2.30455911159515381"
+		
+		2 "|Basic_Room_Mushroom:Mushroom" "scalePivot" " -type \"double3\" 7.66165041923522949 5.28484455427430611 2.30455911159515381";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "Basic_Room_MonitorRN";
@@ -282,6 +290,8 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+select -ne :ikSystem;
+	setAttr -s 4 ".sol";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
