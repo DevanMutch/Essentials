@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Walls.ma
-//Last modified: Wed, Sep 24, 2025 12:49:38 PM
+//Last modified: Wed, Sep 24, 2025 12:54:53 PM
 //Codeset: 1252
 requires maya "2026";
 requires -nodeType "polyBoolean" "polyBoolean" "1.1";
@@ -13,12 +13,12 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202505131231-aff5f20443";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "5BE6BA70-425C-825C-DCDD-06B9CE8ED1E5";
+fileInfo "UUID" "5031A252-4C7B-9D18-8AAF-BB8EBE424CE8";
 createNode transform -s -n "persp";
 	rename -uid "111EF4FD-4B58-6E2D-8464-CC98D4FA1CC9";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -5.5852331522172705 -24.122163562717265 39.971130298076417 ;
-	setAttr ".r" -type "double3" 35.66164727039429 -4.6000000000186478 -1.9942704634686993e-16 ;
+	setAttr ".t" -type "double3" 22.629592684417702 11.955520087816867 39.671633486428377 ;
+	setAttr ".r" -type "double3" -11.738352729609847 28.599999999999262 -4.528212349324178e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "E4EED229-480E-870A-A556-BAB7A11C9329";
 	setAttr -k off ".v" no;
