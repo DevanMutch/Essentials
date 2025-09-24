@@ -1,11 +1,39 @@
 //Maya ASCII 2026 scene
 //Name: New Room.ma
-//Last modified: Tue, Sep 23, 2025 09:39:24 PM
+//Last modified: Tue, Sep 23, 2025 09:41:38 PM
 //Codeset: 1252
 file -rdi 1 -ns "Basic_Room_BedFrame" -rfn "Basic_Room_BedFrameRN" -op "v=0;"
 		 -typ "mayaAscii" "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//assets/Basic_Room_BedFrame.ma";
+file -rdi 1 -ns "Basic_Room_Matress" -rfn "Basic_Room_MatressRN" -op "v=0;"
+		 -typ "mayaAscii" "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//assets/Basic_Room_Matress.ma";
+file -rdi 1 -ns "Basic_Room_Desk" -rfn "Basic_Room_DeskRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//assets/Basic_Room_Desk.ma";
+file -rdi 1 -ns "Basic_Room_Mushroom" -rfn "Basic_Room_MushroomRN" -op "v=0;"
+		 -typ "mayaAscii" "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//assets/Basic_Room_Mushroom.ma";
+file -rdi 1 -ns "Basic_Room_Monitor" -rfn "Basic_Room_MonitorRN" -op "v=0;"
+		 -typ "mayaAscii" "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//assets/Basic_Room_Monitor.ma";
+file -rdi 1 -ns "Basic_Room_Shelf_1" -rfn "Basic_Room_Shelf_1RN" -op "v=0;"
+		 -typ "mayaAscii" "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//assets/Basic_Room_Shelf_1.ma";
+file -rdi 1 -ns "Basic_Room_BookShelf" -rfn "Basic_Room_BookShelfRN" -op "v=0;"
+		 -typ "mayaAscii" "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//assets/Basic_Room_BookShelf.ma";
+file -rdi 1 -ns "Basic_Room_Chair" -rfn "Basic_Room_ChairRN" -op "v=0;" -typ
+		 "mayaAscii" "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//assets/Basic_Room_Chair.ma";
 file -r -ns "Basic_Room_BedFrame" -dr 1 -rfn "Basic_Room_BedFrameRN" -op "v=0;" 
 		-typ "mayaAscii" "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//assets/Basic_Room_BedFrame.ma";
+file -r -ns "Basic_Room_Matress" -dr 1 -rfn "Basic_Room_MatressRN" -op "v=0;" -typ
+		 "mayaAscii" "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//assets/Basic_Room_Matress.ma";
+file -r -ns "Basic_Room_Desk" -dr 1 -rfn "Basic_Room_DeskRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//assets/Basic_Room_Desk.ma";
+file -r -ns "Basic_Room_Mushroom" -dr 1 -rfn "Basic_Room_MushroomRN" -op "v=0;" 
+		-typ "mayaAscii" "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//assets/Basic_Room_Mushroom.ma";
+file -r -ns "Basic_Room_Monitor" -dr 1 -rfn "Basic_Room_MonitorRN" -op "v=0;" -typ
+		 "mayaAscii" "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//assets/Basic_Room_Monitor.ma";
+file -r -ns "Basic_Room_Shelf_1" -dr 1 -rfn "Basic_Room_Shelf_1RN" -op "v=0;" -typ
+		 "mayaAscii" "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//assets/Basic_Room_Shelf_1.ma";
+file -r -ns "Basic_Room_BookShelf" -dr 1 -rfn "Basic_Room_BookShelfRN" -op "v=0;"
+		 -typ "mayaAscii" "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//assets/Basic_Room_BookShelf.ma";
+file -r -ns "Basic_Room_Chair" -dr 1 -rfn "Basic_Room_ChairRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//assets/Basic_Room_Chair.ma";
 requires maya "2026";
 requires "stereoCamera" "10.0";
 requires "mtoa" "5.5.2";
@@ -16,12 +44,12 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202505131231-aff5f20443";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "A944919C-4B9E-736D-78A1-C386B21800F5";
+fileInfo "UUID" "7E7E9361-431B-FDAD-1437-D19EAFDDE34F";
 createNode transform -s -n "persp";
 	rename -uid "2983C934-4FD6-4C07-5100-5FB5C4946C22";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -35.58034959612484 11.85622034606711 24.545239084664907 ;
-	setAttr ".r" -type "double3" -15.338352729600569 -55.4 0 ;
+	setAttr ".t" -type "double3" -43.649783554192105 8.6586342066544528 -5.3595195071881321 ;
+	setAttr ".r" -type "double3" -11.138352729564504 -96.999999999984709 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "17A65E08-49A0-8B34-061E-70BB61F38D7E";
 	setAttr -k off ".v" no;
@@ -157,6 +185,55 @@ createNode reference -n "Basic_Room_BedFrameRN";
 		"Basic_Room_BedFrameRN" 0;
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
+createNode reference -n "Basic_Room_MatressRN";
+	rename -uid "432D935F-4A9A-6204-6382-BE9061207D9C";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"Basic_Room_MatressRN"
+		"Basic_Room_MatressRN" 0;
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "Basic_Room_DeskRN";
+	rename -uid "088766EE-4ACA-D3D4-1129-8D8B0B52C525";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"Basic_Room_DeskRN"
+		"Basic_Room_DeskRN" 0;
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "Basic_Room_MushroomRN";
+	rename -uid "DCA16728-4693-16D7-AB8C-D9A1AD23F53C";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"Basic_Room_MushroomRN"
+		"Basic_Room_MushroomRN" 0;
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "Basic_Room_MonitorRN";
+	rename -uid "5F163198-4A5F-F791-7E54-9D9515B2623B";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"Basic_Room_MonitorRN"
+		"Basic_Room_MonitorRN" 0;
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "Basic_Room_Shelf_1RN";
+	rename -uid "7AB69B09-49C3-4D06-1732-1C90AF1AF900";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"Basic_Room_Shelf_1RN"
+		"Basic_Room_Shelf_1RN" 0;
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "Basic_Room_BookShelfRN";
+	rename -uid "4E610A89-43FA-D9B0-B522-E19DB97E3236";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"Basic_Room_BookShelfRN"
+		"Basic_Room_BookShelfRN" 0;
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "Basic_Room_ChairRN";
+	rename -uid "6054E539-4300-1240-21A1-1C9841249F8E";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"Basic_Room_ChairRN"
+		"Basic_Room_ChairRN" 0;
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -182,7 +259,9 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
+	setAttr -s 15 ".dsm";
 	setAttr ".ro" yes;
+	setAttr -s 11 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
