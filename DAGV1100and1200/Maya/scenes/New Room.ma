@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: New Room.ma
-//Last modified: Wed, Sep 24, 2025 01:29:07 PM
+//Last modified: Wed, Sep 24, 2025 01:31:03 PM
 //Codeset: 1252
 file -rdi 1 -ns "Basic_Room_BedFrame" -rfn "Basic_Room_BedFrameRN" -op "v=0;"
 		 -typ "mayaAscii" "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//assets/Basic_Room_BedFrame.ma";
@@ -46,17 +46,17 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202505131231-aff5f20443";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "C16E32A0-4167-4C8E-326C-EE9EACD1610C";
+fileInfo "UUID" "CE464119-410F-8A61-FAB7-79B442AFA7C0";
 createNode transform -s -n "persp";
 	rename -uid "2983C934-4FD6-4C07-5100-5FB5C4946C22";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 4.044732996260902 1.9247671450469315 -8.6880755327904584 ;
-	setAttr ".r" -type "double3" -7.5383527294711659 -270.1999999999764 -2.2779091231854256e-13 ;
+	setAttr ".t" -type "double3" 52.149950427575597 15.352857485547526 -11.812421585482475 ;
+	setAttr ".r" -type "double3" -14.138352724496091 -267.00000000009879 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "17A65E08-49A0-8B34-061E-70BB61F38D7E";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 10.886194105367707;
+	setAttr ".coi" 60.820414542266398;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -197,10 +197,13 @@ createNode reference -n "Basic_Room_BedFrameRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Basic_Room_BedFrameRN"
 		"Basic_Room_BedFrameRN" 0
-		"Basic_Room_BedFrameRN" 14
+		"Basic_Room_BedFrameRN" 15
 		2 "|Basic_Room_BedFrame:Matress|Basic_Room_BedFrame:polySurface54" "translate" 
-		" -type \"double3\" -10.58429695452036867 -0.13477804479178479 0"
+		" -type \"double3\" -10.58429695452036867 -0.13477804479178479 -1.9183730384471378"
+		
 		2 "|Basic_Room_BedFrame:Matress|Basic_Room_BedFrame:polySurface54" "translateY" 
+		" -av"
+		2 "|Basic_Room_BedFrame:Matress|Basic_Room_BedFrame:polySurface54" "translateZ" 
 		" -av"
 		2 "|Basic_Room_BedFrame:Matress|Basic_Room_BedFrame:polySurface54" "rotatePivot" 
 		" -type \"double3\" 8.58840110279906455 0.11840644996153638 -9.70858271800991446"
@@ -237,7 +240,7 @@ createNode reference -n "Basic_Room_MatressRN";
 		"Basic_Room_MatressRN" 0
 		"Basic_Room_MatressRN" 1
 		2 "|Basic_Room_Matress:Matress|Basic_Room_Matress:polySurface41" "translate" 
-		" -type \"double3\" -10.58429695452036867 -0.14755816223885843 0";
+		" -type \"double3\" -10.58429695452036867 -0.14755816223885843 -1.9183730384471378";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "Basic_Room_DeskRN";
@@ -314,7 +317,12 @@ createNode reference -n "Basic_Room_BookShelfRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Basic_Room_BookShelfRN"
 		"Basic_Room_BookShelfRN" 0
-		"Basic_Room_BookShelfRN" 13
+		"Basic_Room_BookShelfRN" 17
+		2 "|Basic_Room_BookShelf:BookShelf" "translate" " -type \"double3\" 0.096459089730704023 -0.092781795065743022 -7.50900023892427715"
+		
+		2 "|Basic_Room_BookShelf:BookShelf" "translateX" " -av"
+		2 "|Basic_Room_BookShelf:BookShelf" "translateY" " -av"
+		2 "|Basic_Room_BookShelf:BookShelf" "translateZ" " -av"
 		2 "|Basic_Room_BookShelf:BookShelf" "rotatePivot" " -type \"double3\" 8.63952012553812132 0.13402347175169571 -4.09243059158325195"
 		
 		2 "|Basic_Room_BookShelf:BookShelf" "rotatePivotTranslate" " -type \"double3\" -0.58281805053116997 0 -0.5903528973909733"
@@ -349,7 +357,7 @@ createNode reference -n "Basic_Room_ChairRN";
 		"Basic_Room_ChairRN"
 		"Basic_Room_ChairRN" 0
 		"Basic_Room_ChairRN" 5
-		2 "|Basic_Room_Chair:Chair" "translate" " -type \"double3\" -5.97840783943686027 -0.081864747154697382 1.27009638409428893"
+		2 "|Basic_Room_Chair:Chair" "translate" " -type \"double3\" -5.97840783943686027 -0.11924535028372446 1.27009638409428893"
 		
 		2 "|Basic_Room_Chair:Chair" "rotate" " -type \"double3\" 0 121.66693333329899929 0"
 		
