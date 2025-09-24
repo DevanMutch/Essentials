@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: New Room.ma
-//Last modified: Wed, Sep 24, 2025 01:00:40 PM
+//Last modified: Wed, Sep 24, 2025 01:05:44 PM
 //Codeset: 1252
 file -rdi 1 -ns "Basic_Room_BedFrame" -rfn "Basic_Room_BedFrameRN" -op "v=0;"
 		 -typ "mayaAscii" "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//assets/Basic_Room_BedFrame.ma";
@@ -46,17 +46,17 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202505131231-aff5f20443";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "4320FD33-42EA-96DE-5662-7E9E581BBFA6";
+fileInfo "UUID" "2F721B91-4F6A-4109-8FC0-A7B1C3694C02";
 createNode transform -s -n "persp";
 	rename -uid "2983C934-4FD6-4C07-5100-5FB5C4946C22";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -4.2167806163317039 4.008634947239849 18.932845365880205 ;
-	setAttr ".r" -type "double3" -9.9383527294677751 15.79999999996979 0 ;
+	setAttr ".t" -type "double3" -5.0992650737273593 1.7100201490315623 24.019752947088342 ;
+	setAttr ".r" -type "double3" 9.2616472705292523 18.200000000000685 -2.092531746301717e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "17A65E08-49A0-8B34-061E-70BB61F38D7E";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 25.084041686655084;
+	setAttr ".coi" 20.230231431334502;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -245,12 +245,18 @@ createNode reference -n "Basic_Room_DeskRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Basic_Room_DeskRN"
 		"Basic_Room_DeskRN" 0
-		"Basic_Room_DeskRN" 3
-		2 "|Basic_Room_Desk:Table" "translate" " -type \"double3\" -16.33721903799615305 -0.17320819506788521 0.36233552301958649"
+		"Basic_Room_DeskRN" 5
+		2 "|Basic_Room_Desk:Table" "translate" " -type \"double3\" -16.33721903799615305 0.085647421181464178 0.36233552301958649"
 		
 		2 "|Basic_Room_Desk:Table" "rotate" " -type \"double3\" 0 179.52301177039564095 0"
 		
-		2 "|Basic_Room_Desk:Table" "rotatePivotTranslate" " -type \"double3\" 0 0 0";
+		2 "|Basic_Room_Desk:Table" "rotatePivotTranslate" " -type \"double3\" 0 0 0"
+		
+		2 "|Basic_Room_Desk:Table|Basic_Room_Desk:TableShape" "uvPivot" " -type \"double2\" 0.5 0.875"
+		
+		2 "|Basic_Room_Desk:Table|Basic_Room_Desk:TableShape" "pt[0:79]" (" -s 80 -type \"float3\" 0 -1.4901161000000001e-08 0 0 0 0 0 1.4901161000000001e-08 0 0 0 0 0 1.4901161000000001e-08 0 0 0 0 0 -1.4901161000000001e-08 0 0 0 0 0 0 0 0 -1.4901161000000001e-08 0 0 -1.4901161000000001e-08 0 0 0 0 0 -2.9802322000000001e-08 0 0 -1.4901161000000001e-08 0 0 -1.4901161000000001e-08 0 0 -2.9802322000000001e-08 0 0 0 0 0 2.9802322000000001e-08 0 0 2.9802322000000001e-08 0 0 0 0 0 5.9604644999999993e-08 0 0 5.9604644999999993e-08 0 0 5.9604644999999993e-08 0 0 5.9604644999999993e-08 0 0 0 0 0 7.4505806000000003e-09 0 0 1.4901161000000001e-08 0 0 -3.7252903000000002e-09 0 0 1.4901161000000001e-08 0 0 0 0 0 0 0 0 3.7252903000000002e-09 0 0 1.4901161000000001e-08 0 0 -1.4901161000000001e-08 0 0 -3.7252903000000002e-09 0 0 -3.7252903000000002e-09 0 0 7.4505806000000003e-09 0 0 1.4901161000000001e-08 0 0 -3.7252903000000002e-09 0 0 0 0 0 1.4901161000000001e-08 0 0 7.4505806000000003e-09 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.4901161000000001e-08 0 0 7.4505806000000003e-09 0 0 -1.4901161000000001e-08 0 0"
+		+ " 0 0 0 1.4901161000000001e-08 0 0 0 0 0 1.4901161000000001e-08 0 0 0 0 0 -1.4901161000000001e-08 0 0 0 0 0 0 0 0 -1.4901161000000001e-08 0 0 -1.4901161000000001e-08 0 0 0 0 0 -2.9802322000000001e-08 0 0 -1.4901161000000001e-08 0 0 -1.4901161000000001e-08 0 0 -2.9802322000000001e-08 0 0 0 0 0 2.9802322000000001e-08 0 0 2.9802322000000001e-08 0 0 0 0 0 5.9604644999999993e-08 0 0 5.9604644999999993e-08 0 0 5.9604644999999993e-08 0 0 5.9604644999999993e-08 0 0 1.4901161000000001e-08 0 0 7.4505806000000003e-09 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.4901161000000001e-08 0 0 7.4505806000000003e-09 0"
+		);
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "Basic_Room_MushroomRN";
@@ -259,7 +265,7 @@ createNode reference -n "Basic_Room_MushroomRN";
 		"Basic_Room_MushroomRN"
 		"Basic_Room_MushroomRN" 0
 		"Basic_Room_MushroomRN" 3
-		2 "|Basic_Room_Mushroom:Mushroom" "translate" " -type \"double3\" -18.33688146934275309 -3.10795537313722114 5.26724515858101228"
+		2 "|Basic_Room_Mushroom:Mushroom" "translate" " -type \"double3\" -18.33688146934275309 -2.84909975688787176 5.26724515858101228"
 		
 		2 "|Basic_Room_Mushroom:Mushroom" "rotatePivot" " -type \"double3\" 7.66165041923522949 5.28484455427430611 2.30455911159515381"
 		
@@ -272,7 +278,7 @@ createNode reference -n "Basic_Room_MonitorRN";
 		"Basic_Room_MonitorRN"
 		"Basic_Room_MonitorRN" 0
 		"Basic_Room_MonitorRN" 3
-		2 "|Basic_Room_Monitor:polySurface60" "translate" " -type \"double3\" -16.77069957005897294 -0.23241838841297069 -2.39406808003245253"
+		2 "|Basic_Room_Monitor:polySurface60" "translate" " -type \"double3\" -16.77069957005897294 0.026437227836378696 -2.39406808003245253"
 		
 		2 "|Basic_Room_Monitor:polySurface60" "rotate" " -type \"double3\" 0 -196.95835498060085911 0"
 		
