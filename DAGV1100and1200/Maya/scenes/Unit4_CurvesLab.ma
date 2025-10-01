@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Unit4_CurvesLab.ma
-//Last modified: Wed, Oct 01, 2025 08:17:20 AM
+//Last modified: Wed, Oct 01, 2025 08:41:34 AM
 //Codeset: 1252
 requires maya "2026";
 requires "mtoa" "5.5.2";
@@ -10,17 +10,17 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202505131231-aff5f20443";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "3D4A2DCD-486A-0123-68D2-8AADFCE95FA1";
+fileInfo "UUID" "F30A6FD1-4205-69A9-CAF2-96ABAF316000";
 createNode transform -s -n "persp";
 	rename -uid "B61FA099-4E54-E7C6-9CFB-95BA905DA131";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 12.787367443170078 13.702142015281808 11.414855865086484 ;
-	setAttr ".r" -type "double3" -15.338352734812114 777.79999999942902 0 ;
+	setAttr ".t" -type "double3" 37.909742861228253 27.838925910357496 28.449036357654325 ;
+	setAttr ".r" -type "double3" -22.538352736412445 412.59999999883206 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "24C5D22A-4047-5382-77C9-C88C4CD37841";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 18.845425202844748;
+	setAttr ".coi" 55.231807316486176;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -61,14 +61,14 @@ createNode camera -s -n "frontShape" -p "front";
 createNode transform -s -n "side";
 	rename -uid "7414B54D-4621-5D48-455E-10A84B0BE8DB";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1000.1 7.5501346179935478 0.061007151905376089 ;
+	setAttr ".t" -type "double3" 1000.1 10.416001431981359 -0.39502217069004497 ;
 	setAttr ".r" -type "double3" 0 90 0 ;
 createNode camera -s -n "sideShape" -p "side";
 	rename -uid "92A09797-480D-71D0-0E8F-A3BF6F096A32";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
-	setAttr ".ow" 25.956454125599972;
+	setAttr ".ow" 34.234395687632286;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
@@ -108,10 +108,10 @@ createNode nurbsCurve -n "curveShape1" -p "curve1";
 		0 0.49980099678228729 -0.58428376190496267
 		0 0.9073542106536181 0.20242780126551191
 		;
-createNode transform -n "revolvedSurface1";
+createNode transform -n "Pot_1";
 	rename -uid "BF5F45B1-4BEB-5934-60B3-62A41803D671";
 	setAttr ".t" -type "double3" 0 0.34278102499543195 0 ;
-createNode mesh -n "revolvedSurfaceShape1" -p "revolvedSurface1";
+createNode mesh -n "Pot_Shape1" -p "Pot_1";
 	rename -uid "4FBFF91F-40AC-3569-C34B-9790ACE4A9CB";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -121,43 +121,68 @@ createNode mesh -n "revolvedSurfaceShape1" -p "revolvedSurface1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "curve2";
-	rename -uid "16C8B569-4CCC-18E0-46DD-67BD2E8F2BE0";
-	setAttr ".t" -type "double3" 0 -0.03120646773949165 -0.11274533972033574 ;
-createNode nurbsCurve -n "curveShape2" -p "curve2";
-	rename -uid "3CC93214-4D41-71FF-DA14-4E812DE7A7D5";
+createNode transform -n "curve4";
+	rename -uid "D125624B-40C3-CD3A-7942-CE801B144CF5";
+	setAttr ".t" -type "double3" 0.38633038749639281 -0.018445654141171719 0 ;
+createNode nurbsCurve -n "curveShape4" -p "curve4";
+	rename -uid "467981BB-451E-66CE-68AF-3CB78D44E6ED";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
-		3 2 0 no 3
-		7 0 0 0 1 2 2 2
-		5
-		0 7.9713271988143761 -0.69453652431709834
-		0 8.7191999552292216 -0.77508651123560901
-		0 10.253501896851944 -0.96927942811292778
-		0 11.908791501034985 -1.994277917199837
-		0 12.70493698693488 -2.4848577400165652
+		1 6 0 no 3
+		7 0 0.16666666666666666 0.33333333333333331 0.5 0.66666666666666663 0.83333333333333337
+		 1
+		7
+		0 12.479380590955307 2.8661518455966934
+		0 11.583980982849292 2.9046032986399752
+		0 10.690444962727337 2.9260189275436694
+		0 9.822266183724178 2.9099109486728536
+		0 8.9973394127310282 2.9000352042867092
+		0 8.2316633628385212 2.6702546527860269
+		0 7.514027315745432 2.3154281972212445
 		;
-createNode transform -n "curve3";
-	rename -uid "715B8AA1-4480-EDCF-F6E2-C8A343066937";
-	setAttr ".t" -type "double3" 0 -0.03120646773949165 0 ;
-createNode nurbsCurve -n "curveShape3" -p "curve3";
-	rename -uid "3D486CF7-47BB-5579-B5D3-758ED5EC2FC0";
+createNode transform -n "curve5";
+	rename -uid "AAB21CD0-46D1-3692-4F43-DE9A4810810A";
+	setAttr ".t" -type "double3" 0.38633038749639281 -0.018445654141171719 0 ;
+createNode nurbsCurve -n "curveShape5" -p "curve5";
+	rename -uid "03720145-4080-D4B5-CD32-F4B1E35C2332";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
-		3 2 0 no 3
-		7 0 0 0 1 2 2 2
-		5
-		0 12.615620302925292 -2.631229043820114
-		0 11.657659766434945 -2.5567984738120195
-		0 9.6492771358624676 -2.4079373337958181
-		0 8.4390937586947015 -1.7231760897213548
-		0 7.8549984741492 -1.3807954676841225
+		1 6 0 no 3
+		7 0 0.16666666666666666 0.33333333333333331 0.5 0.66666666666666663 0.83333333333333337
+		 1
+		7
+		0.14810671488624644 7.5345766231147291 1.800082973991137
+		0.27679449353435281 8.2695263590208619 1.8339177484877336
+		0.33839283182096441 9.0041061930128112 1.8828563384181645
+		0.27648658512940244 9.7536386035466585 1.9695968992968627
+		0.27730623554484257 10.538859589018749 2.1204702347585549
+		0.17206337794245388 11.328557554659529 2.3661166588479352
+		0.01154183404540271 12.111657843445638 2.6600889904224458
 		;
-createNode transform -n "loftedSurface1";
-	rename -uid "46438EBD-45C1-A482-D3D8-8091532AEA3D";
-	setAttr ".t" -type "double3" 0 -0.10670507410152474 0 ;
-createNode mesh -n "loftedSurfaceShape1" -p "loftedSurface1";
-	rename -uid "09B93E03-4F8D-BEDF-8B0E-8D8A90481580";
+createNode transform -n "curve6";
+	rename -uid "C57C1943-4DD9-93F9-6FCC-3FBE5A173F46";
+	setAttr ".t" -type "double3" 0.38633038749639281 -0.018445654141171719 0 ;
+createNode nurbsCurve -n "curveShape6" -p "curve6";
+	rename -uid "C1F67168-4D4B-087F-AC86-DEBBE516C4FA";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		1 6 0 no 3
+		7 0 0.16666666666666666 0.33333333333333331 0.5 0.66666666666666663 0.83333333333333337
+		 1
+		7
+		0 12.489778445075842 2.6719181894382502
+		0 11.724641320801066 2.1984982006083649
+		0 10.89109094148426 1.7911070047774174
+		0 9.9983817924246825 1.5361706319315422
+		0 9.1089551467327077 1.4282233382579916
+		0 8.2627856341077557 1.413956838538122
+		0 7.4442519014293023 1.4515040308366602
+		;
+createNode transform -n "Leaf_1";
+	rename -uid "B72A9017-4FD3-5366-ABC2-1F952879E5D1";
+	setAttr ".t" -type "double3" 0.38633038749639281 -0.047558002305065905 0 ;
+createNode mesh -n "Leaf_Shape1" -p "Leaf_1";
+	rename -uid "6F2C4EA3-4638-5B9D-2251-229CC72D06EA";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -167,71 +192,147 @@ createNode mesh -n "loftedSurfaceShape1" -p "loftedSurface1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "curve4";
-	rename -uid "D125624B-40C3-CD3A-7942-CE801B144CF5";
-	setAttr ".t" -type "double3" 0 -0.018445654141171719 0 ;
-createNode nurbsCurve -n "curveShape4" -p "curve4";
-	rename -uid "467981BB-451E-66CE-68AF-3CB78D44E6ED";
+createNode transform -n "curve7";
+	rename -uid "E9DDB6D9-4FFD-A59F-3A2A-02AB4AD64CD4";
+createNode nurbsCurve -n "curveShape7" -p "curve7";
+	rename -uid "75C1F7AF-4BEC-C782-7B58-FD8CD0961DE3";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
-		1 6 0 no 3
-		7 0 0.16666666666666666 0.33333333333333331 0.5 0.66666666666666663 0.83333333333333337
-		 1
-		7
-		0 12.597222920193644 2.8985406674279757
-		0 11.801346584793595 2.9695751673088546
-		0 11.004096820135734 3.0241456238735007
-		0 10.205279206244374 3.0336055598752698
-		0 9.4055822579984856 3.0351144453312107
-		0 8.6399062081059785 2.8084120861184889
-		0 7.9222701610128894 2.456629710092467
+		3 2 0 no 3
+		7 0 0 0 1 2 2 2
+		5
+		-0.020505197282300304 14.134869663265626 1.3819355919213441
+		-0.069024942886003304 12.794809035042471 1.493607310939933
+		-0.11038987041506809 10.114687778596108 1.7169507489771025
+		0.0041567253270375568 8.5769132871925553 1.0395976991921998
+		0.079021402421746573 7.8080260414907743 0.70092117429974798
 		;
-createNode transform -n "curve5";
-	rename -uid "AAB21CD0-46D1-3692-4F43-DE9A4810810A";
-	setAttr ".t" -type "double3" 0 -0.018445654141171719 0 ;
-createNode nurbsCurve -n "curveShape5" -p "curve5";
-	rename -uid "03720145-4080-D4B5-CD32-F4B1E35C2332";
+createNode transform -n "curve8";
+	rename -uid "045F2791-4145-7B3C-7F06-BFB0B725DC2A";
+createNode nurbsCurve -n "curveShape8" -p "curve8";
+	rename -uid "3456C4C5-419E-5975-4423-129718628C64";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
-		1 6 0 no 3
-		7 0 0.16666666666666666 0.33333333333333331 0.5 0.66666666666666663 0.83333333333333337
-		 1
-		7
-		0.14810671488624644 7.9455286324517012 1.9449433384408799
-		0.27679449353435281 8.6931160308527442 1.9787781129374764
-		0.33839283182096441 9.4483262985612129 2.0277167028679073
-		0.27648658512940244 10.201008977801759 2.1068689215807503
-		0.27730623554484257 10.949250821619675 2.2365740241666225
-		0.17206337794245388 11.669709601188975 2.4518746691867239
-		0.01154183404540271 12.364638205806424 2.7124728959182725
+		3 2 0 no 3
+		7 0 0 0 1 2 2 2
+		5
+		-0.25045569864290185 7.9080640410073988 -0.038894772754705098
+		-0.53642216021946021 9.9771764699400691 0.1883296771652323
+		-0.14886964765243788 13.369693971179004 0.65194973438237791
+		-0.058988582281028545 13.856316890552066 1.0336781945739513
+		-0.02704530420041721 14.110890246260807 1.2255386976475515
 		;
-createNode transform -n "curve6";
-	rename -uid "C57C1943-4DD9-93F9-6FCC-3FBE5A173F46";
-	setAttr ".t" -type "double3" 0 -0.018445654141171719 0 ;
-createNode nurbsCurve -n "curveShape6" -p "curve6";
-	rename -uid "C1F67168-4D4B-087F-AC86-DEBBE516C4FA";
+createNode transform -n "curve9";
+	rename -uid "5A3896B9-43F1-4600-0628-E4AD28D58D46";
+createNode nurbsCurve -n "curveShape9" -p "curve9";
+	rename -uid "F503F3F1-4EE7-04B1-3EC5-0895C514AB96";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
-		1 6 0 no 3
-		7 0 0.16666666666666666 0.33333333333333331 0.5 0.66666666666666663 0.83333333333333337
-		 1
-		7
-		0 12.527447505877557 2.6194390101634673
-		0 11.837408918816648 2.1769380749688625
-		0 11.101634568950175 1.8158970384485422
-		0 10.307630489762918 1.6116960153300468
-		0 9.4907183689869345 1.5451772336401159
-		0 8.671028479375213 1.5525450458998031
-		0 7.8524947466967596 1.5960662668602104
+		3 2 0 no 3
+		7 0 0 0 1 2 2 2
+		5
+		0 14.134869663265524 1.0524124866205702
+		0 13.506945079275731 0.4794084201809069
+		0 12.251095911296082 -0.66659971269841845
+		0 9.3036948027725792 -0.91191135775564702
+		0 7.8299942485108236 -1.0345671802842611
 		;
-createNode transform -n "loftedSurface2";
-	rename -uid "B72A9017-4FD3-5366-ABC2-1F952879E5D1";
-	setAttr ".t" -type "double3" 0 -0.047558002305065905 0 ;
-createNode mesh -n "loftedSurfaceShape2" -p "loftedSurface2";
-	rename -uid "6F2C4EA3-4638-5B9D-2251-229CC72D06EA";
+createNode transform -n "Leaf_2";
+	rename -uid "F80F7EE0-4E48-3ACD-C954-57BAA4CA8788";
+createNode mesh -n "Leaf_Shape2" -p "Leaf_2";
+	rename -uid "85D13FBD-4151-A61F-9375-74B2F5BEDA00";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "curve10";
+	rename -uid "36BBE0C7-4580-A896-05D7-BB9A62B7B33D";
+	setAttr ".t" -type "double3" -0.93682717396209836 -0.53879329429091716 0.78747727968719605 ;
+	setAttr ".r" -type "double3" 0 0 -17.597202144204029 ;
+createNode nurbsCurve -n "curveShape10" -p "curve10";
+	rename -uid "40276A7D-4D79-0C64-45CA-D7998B1DF89A";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		1 5 0 no 3
+		6 0 0.20000000000000001 0.40000000000000002 0.59999999999999998 0.80000000000000004
+		 1
+		6
+		0 8.2624668120582854 -1.4355707430239502
+		0 10.172844043224069 0.016346240744890918
+		0 12.156184459875284 1.2356088454369702
+		0 14.473999327203686 2.0478327565784316
+		0 16.748193779948352 1.8588191186773702
+		0 19.097304281085211 1.3228328100513567
+		;
+createNode transform -n "curve11";
+	rename -uid "2F0498B6-43C6-2870-1DF9-C686448A7B29";
+	setAttr ".t" -type "double3" -0.93682717396209836 -0.53879329429091716 0.78747727968719605 ;
+	setAttr ".r" -type "double3" 0 0 -17.597202144204029 ;
+createNode nurbsCurve -n "curveShape11" -p "curve11";
+	rename -uid "B110854A-4B92-C595-5DDD-C987849C2A08";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		1 5 0 no 3
+		6 0 0.20000000000000001 0.40000000000000002 0.59999999999999998 0.80000000000000004
+		 1
+		6
+		-0.40432946579370299 18.882572408492727 0.83201710126810813
+		-0.75601789386264684 16.696358959413864 0.19139464178857854
+		-0.87947756254980225 14.53993007535718 -0.43999488609205145
+		-0.1218539073091761 12.417253711522111 -1.0628000373960469
+		-2.4286128663675299e-17 10.233272406645913 -1.6930113325330467
+		-6.9388939039072284e-18 8.0232748516629595 -2.3276090240241198
+		;
+createNode transform -n "curve12";
+	rename -uid "895246F7-42CC-977F-DF6A-8480B7B80EBC";
+	setAttr ".t" -type "double3" -0.93682717396209836 -0.53879329429091716 0.78747727968719605 ;
+	setAttr ".r" -type "double3" 0 0 -17.597202144204029 ;
+createNode nurbsCurve -n "curveShape12" -p "curve12";
+	rename -uid "72C627DE-47CE-F2D0-FD28-58B87B7AA2FD";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		1 5 0 no 3
+		6 0 0.20000000000000001 0.40000000000000002 0.59999999999999998 0.80000000000000004
+		 1
+		6
+		0.30210629943142986 8.1153027970599378 -2.7570727692095098
+		0.63069083644143975 10.597897680117979 -3.0348284343437228
+		0.70926660907055639 13.018670819523361 -3.1126520556044963
+		0.11137110768093278 15.592488463566484 -3.0843653441795618
+		2.4286128663675299e-17 17.352129100170806 -1.686684720561505
+		6.9388939039072284e-18 18.913248390291493 0.34120139248484149
+		;
+createNode transform -n "curve13";
+	rename -uid "8674B635-4CE5-05DE-8DFF-838A46E51180";
+createNode nurbsCurve -n "curveShape13" -p "curve13";
+	rename -uid "16EFC2C1-4D9D-EC11-8816-0D916CC87F2C";
+	setAttr -k off ".v";
+createNode transform -n "Leaf_3";
+	rename -uid "D5A1D1D7-4B71-1D30-69D8-288A68774A0C";
+createNode mesh -n "Leaf_Shape3" -p "Leaf_3";
+	rename -uid "A0E04FE1-436A-542C-7A06-529AF87915AE";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.5 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "Dirt_Layer";
+	rename -uid "2CCE8F19-4674-A3DE-B606-F89BF8F95514";
+	setAttr ".s" -type "double3" 7.8012458242251927 7.8012458242251927 7.8012458242251927 ;
+createNode mesh -n "Dirt_LayerShape" -p "Dirt_Layer";
+	rename -uid "4AD5CA36-476D-7129-3A50-869CA786A484";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50000005960464478 0.42500007152557373 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -318,24 +419,6 @@ createNode polyNormal -n "polyNormal1";
 	rename -uid "40F9DC99-43BD-E74E-4310-239CE10F1071";
 	setAttr ".ics" -type "componentList" 1 "f[*]";
 	setAttr ".unm" no;
-createNode loft -n "loft1";
-	rename -uid "34153241-47CD-1D3E-2D5F-5E980B17830B";
-	setAttr -s 2 ".ic";
-	setAttr ".u" yes;
-	setAttr -s 2 ".r[0:1]" no no;
-	setAttr ".rsn" yes;
-createNode nurbsTessellate -n "nurbsTessellate2";
-	rename -uid "A7FE1503-41C7-99EE-74F7-70B1E85CDA77";
-	setAttr ".f" 2;
-	setAttr ".pt" 1;
-	setAttr ".chr" 0.9;
-	setAttr ".vn" 2;
-	setAttr ".ucr" no;
-	setAttr ".cht" 0.2;
-createNode polyNormal -n "polyNormal2";
-	rename -uid "90127C0A-4607-AEC0-01E7-37AF57F41AF8";
-	setAttr ".ics" -type "componentList" 1 "f[*]";
-	setAttr ".unm" no;
 createNode loft -n "loft2";
 	rename -uid "B2C0707B-4854-9258-4CB8-AC8511D00E0C";
 	setAttr -s 3 ".ic";
@@ -350,6 +433,43 @@ createNode nurbsTessellate -n "nurbsTessellate3";
 	setAttr ".vn" 1;
 	setAttr ".ucr" no;
 	setAttr ".cht" 0.01;
+createNode loft -n "loft3";
+	rename -uid "96740097-40D9-E24D-AEE7-829B84BD5560";
+	setAttr -s 3 ".ic";
+	setAttr ".u" yes;
+	setAttr -s 3 ".r[0:2]" no no no;
+	setAttr ".rsn" yes;
+createNode nurbsTessellate -n "nurbsTessellate4";
+	rename -uid "9894486B-41DF-47B7-482C-D38ECD7E5CEE";
+	setAttr ".f" 2;
+	setAttr ".pt" 1;
+	setAttr ".chr" 0.9;
+	setAttr ".vn" 1;
+	setAttr ".ucr" no;
+	setAttr ".cht" 0.01;
+createNode loft -n "loft4";
+	rename -uid "455BB5BF-45EA-4FD4-0A3B-008E93FDCCA8";
+	setAttr -s 3 ".ic";
+	setAttr ".u" yes;
+	setAttr -s 3 ".r[0:2]" no no no;
+	setAttr ".rsn" yes;
+createNode nurbsTessellate -n "nurbsTessellate5";
+	rename -uid "0ED8850F-41C4-EBE8-FE85-45B4A1CD2826";
+	setAttr ".f" 2;
+	setAttr ".pt" 1;
+	setAttr ".chr" 0.9;
+	setAttr ".vn" 1;
+	setAttr ".ucr" no;
+	setAttr ".cht" 0.01;
+createNode polyNormal -n "polyNormal2";
+	rename -uid "A87C4A68-4820-5421-B0BE-EFB29FF33D1B";
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+	setAttr ".unm" no;
+createNode polySphere -n "polySphere1";
+	rename -uid "9D943D57-440D-CB5C-7F66-BF9A47A541C9";
+createNode deleteComponent -n "deleteComponent1";
+	rename -uid "67BD5C8C-4AC1-C104-F48D-46AE0DAB0C78";
+	setAttr ".dc" -type "componentList" 2 "f[0:319]" "f[360:379]";
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -375,7 +495,7 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 3 ".dsm";
+	setAttr -s 5 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
@@ -397,9 +517,11 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-connectAttr "polyNormal1.out" "revolvedSurfaceShape1.i";
-connectAttr "polyNormal2.out" "loftedSurfaceShape1.i";
-connectAttr "nurbsTessellate3.op" "loftedSurfaceShape2.i";
+connectAttr "polyNormal1.out" "Pot_Shape1.i";
+connectAttr "nurbsTessellate3.op" "Leaf_Shape1.i";
+connectAttr "nurbsTessellate4.op" "Leaf_Shape2.i";
+connectAttr "polyNormal2.out" "Leaf_Shape3.i";
+connectAttr "deleteComponent1.og" "Dirt_LayerShape.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -409,16 +531,24 @@ connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "curveShape1.ws" "revolve1.ic";
 connectAttr "revolve1.os" "nurbsTessellate1.is";
 connectAttr "nurbsTessellate1.op" "polyNormal1.ip";
-connectAttr "curveShape3.ws" "loft1.ic[0]";
-connectAttr "curveShape2.ws" "loft1.ic[1]";
-connectAttr "loft1.os" "nurbsTessellate2.is";
-connectAttr "nurbsTessellate2.op" "polyNormal2.ip";
 connectAttr "curveShape4.ws" "loft2.ic[0]";
 connectAttr "curveShape5.ws" "loft2.ic[1]";
 connectAttr "curveShape6.ws" "loft2.ic[2]";
 connectAttr "loft2.os" "nurbsTessellate3.is";
+connectAttr "curveShape7.ws" "loft3.ic[0]";
+connectAttr "curveShape8.ws" "loft3.ic[1]";
+connectAttr "curveShape9.ws" "loft3.ic[2]";
+connectAttr "loft3.os" "nurbsTessellate4.is";
+connectAttr "curveShape10.ws" "loft4.ic[0]";
+connectAttr "curveShape11.ws" "loft4.ic[1]";
+connectAttr "curveShape12.ws" "loft4.ic[2]";
+connectAttr "loft4.os" "nurbsTessellate5.is";
+connectAttr "nurbsTessellate5.op" "polyNormal2.ip";
+connectAttr "polySphere1.out" "deleteComponent1.ig";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "revolvedSurfaceShape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "loftedSurfaceShape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "loftedSurfaceShape2.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "Pot_Shape1.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "Leaf_Shape1.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "Leaf_Shape2.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "Leaf_Shape3.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "Dirt_LayerShape.iog" ":initialShadingGroup.dsm" -na;
 // End of Unit4_CurvesLab.ma
