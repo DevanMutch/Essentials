@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: New Room.ma
-//Last modified: Tue, Oct 07, 2025 10:54:59 PM
+//Last modified: Tue, Oct 07, 2025 11:13:27 PM
 //Codeset: 1252
 file -rdi 1 -ns "Basic_Room_BedFrame" -dr 1 -rfn "Basic_Room_BedFrameRN" -op
 		 "v=0;" -typ "mayaAscii" "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//assets/Basic_Room_BedFrame.ma";
@@ -20,6 +20,7 @@ file -rdi 1 -ns "Basic_Room_Chair" -rfn "Basic_Room_ChairRN" -op "v=0;" -typ
 		 "mayaAscii" "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//assets/Basic_Room_Chair.ma";
 file -rdi 1 -ns "Walls" -rfn "WallsRN" -op "v=0;" -typ "mayaAscii" "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//assets/Walls.ma";
 file -rdi 1 -ns "Coffin" -rfn "CoffinRN" -op "v=0;" -typ "mayaAscii" "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//scenes/Coffin.ma";
+file -rdi 1 -ns "Pillow" -rfn "PillowRN" -op "v=0;" -typ "mayaAscii" "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//scenes/Pillow.ma";
 file -r -ns "Basic_Room_BedFrame" -dr 1 -rfn "Basic_Room_BedFrameRN" -op "v=0;" 
 		-typ "mayaAscii" "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//assets/Basic_Room_BedFrame.ma";
 file -r -ns "Basic_Room_Matress" -dr 1 -rfn "Basic_Room_MatressRN" -op "v=0;" -typ
@@ -38,6 +39,7 @@ file -r -ns "Basic_Room_Chair" -dr 1 -rfn "Basic_Room_ChairRN" -op "v=0;" -typ "
 		 "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//assets/Basic_Room_Chair.ma";
 file -r -ns "Walls" -dr 1 -rfn "WallsRN" -op "v=0;" -typ "mayaAscii" "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//assets/Walls.ma";
 file -r -ns "Coffin" -dr 1 -rfn "CoffinRN" -op "v=0;" -typ "mayaAscii" "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//scenes/Coffin.ma";
+file -r -ns "Pillow" -dr 1 -rfn "PillowRN" -op "v=0;" -typ "mayaAscii" "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//scenes/Pillow.ma";
 requires maya "2026";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -49,17 +51,17 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202505131231-aff5f20443";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "0FAA63E0-4DD4-6EBA-932F-4EAB8706EF16";
+fileInfo "UUID" "431DD941-4C32-74DC-6072-51949AD3F5DF";
 createNode transform -s -n "persp";
 	rename -uid "2983C934-4FD6-4C07-5100-5FB5C4946C22";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 71.4177917840764 63.288511122748119 8.1741459416097655 ;
-	setAttr ".r" -type "double3" -38.138352724574084 -282.19999999995031 0 ;
+	setAttr ".t" -type "double3" 8.2048400136617197 16.348945874417463 9.4772969787024977 ;
+	setAttr ".r" -type "double3" -33.938352724279056 -320.59999999989617 -4.1159783792921383e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "17A65E08-49A0-8B34-061E-70BB61F38D7E";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 101.67699974787081;
+	setAttr ".coi" 28.393910295181684;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -520,6 +522,21 @@ createNode reference -n "CoffinRN";
 		2 "|Coffin:pCube2" "rotatePivotTranslate" " -type \"double3\" 0 0 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
+createNode reference -n "PillowRN";
+	rename -uid "02AB9DB1-426E-6B07-513D-B1BD4F4DE741";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"PillowRN"
+		"PillowRN" 0
+		"PillowRN" 4
+		2 "|Pillow:Pillow" "translate" " -type \"double3\" -9.96716229480392357 -0.38017828640138085 -9.91411761376494738"
+		
+		2 "|Pillow:Pillow" "rotate" " -type \"double3\" -0.93104431989478886 2.9450122419750504 -35.7403858096897622"
+		
+		2 "|Pillow:Pillow" "scale" " -type \"double3\" 0.21477826777171624 0.21477826777171624 0.21477826777171624"
+		
+		2 "|Pillow:Pillow" "rotatePivotTranslate" " -type \"double3\" 0 0 0";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -538,7 +555,7 @@ select -ne :defaultShaderList1;
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
-	setAttr -s 5 ".r";
+	setAttr -s 6 ".r";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
@@ -546,7 +563,7 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 22 ".dsm";
+	setAttr -s 24 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 12 ".gn";
 select -ne :initialParticleSE;
