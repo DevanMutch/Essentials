@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: New Room.ma
-//Last modified: Tue, Oct 07, 2025 10:51:27 PM
+//Last modified: Tue, Oct 07, 2025 10:54:59 PM
 //Codeset: 1252
 file -rdi 1 -ns "Basic_Room_BedFrame" -dr 1 -rfn "Basic_Room_BedFrameRN" -op
 		 "v=0;" -typ "mayaAscii" "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//assets/Basic_Room_BedFrame.ma";
@@ -19,6 +19,7 @@ file -rdi 1 -ns "Basic_Room_BookShelf" -rfn "Basic_Room_BookShelfRN" -op "v=0;"
 file -rdi 1 -ns "Basic_Room_Chair" -rfn "Basic_Room_ChairRN" -op "v=0;" -typ
 		 "mayaAscii" "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//assets/Basic_Room_Chair.ma";
 file -rdi 1 -ns "Walls" -rfn "WallsRN" -op "v=0;" -typ "mayaAscii" "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//assets/Walls.ma";
+file -rdi 1 -ns "Coffin" -rfn "CoffinRN" -op "v=0;" -typ "mayaAscii" "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//scenes/Coffin.ma";
 file -r -ns "Basic_Room_BedFrame" -dr 1 -rfn "Basic_Room_BedFrameRN" -op "v=0;" 
 		-typ "mayaAscii" "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//assets/Basic_Room_BedFrame.ma";
 file -r -ns "Basic_Room_Matress" -dr 1 -rfn "Basic_Room_MatressRN" -op "v=0;" -typ
@@ -36,6 +37,7 @@ file -r -ns "Basic_Room_BookShelf" -dr 1 -rfn "Basic_Room_BookShelfRN" -op "v=0;
 file -r -ns "Basic_Room_Chair" -dr 1 -rfn "Basic_Room_ChairRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//assets/Basic_Room_Chair.ma";
 file -r -ns "Walls" -dr 1 -rfn "WallsRN" -op "v=0;" -typ "mayaAscii" "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//assets/Walls.ma";
+file -r -ns "Coffin" -dr 1 -rfn "CoffinRN" -op "v=0;" -typ "mayaAscii" "C:/Users/Mchuck/Documents/Github/Essentials/DAGV1100and1200/Maya//scenes/Coffin.ma";
 requires maya "2026";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -47,17 +49,17 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202505131231-aff5f20443";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "287FC33D-4A52-DAC4-65E5-A8B6B9173374";
+fileInfo "UUID" "0FAA63E0-4DD4-6EBA-932F-4EAB8706EF16";
 createNode transform -s -n "persp";
 	rename -uid "2983C934-4FD6-4C07-5100-5FB5C4946C22";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 41.390801392078259 44.820651487239992 45.113799427370971 ;
-	setAttr ".r" -type "double3" -31.538352724530039 -318.20000000002034 2.1332374770050063e-15 ;
+	setAttr ".t" -type "double3" 71.4177917840764 63.288511122748119 8.1741459416097655 ;
+	setAttr ".r" -type "double3" -38.138352724574084 -282.19999999995031 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "17A65E08-49A0-8B34-061E-70BB61F38D7E";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 84.738392344832903;
+	setAttr ".coi" 101.67699974787081;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -489,6 +491,35 @@ createNode reference -n "sharedReferenceNode";
 createNode polyPlane -n "polyPlane1";
 	rename -uid "5374F4AE-4DAC-C577-2175-D79EBEC27B6A";
 	setAttr ".cuv" 2;
+createNode reference -n "CoffinRN";
+	rename -uid "53CA6890-460F-0D9D-A6C3-E8B694B3CD84";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"CoffinRN"
+		"CoffinRN" 0
+		"CoffinRN" 11
+		2 "|Coffin:pCube1" "translate" " -type \"double3\" -1.77602771441438123 -17.40863234367284562 -9.18512269426075179"
+		
+		2 "|Coffin:pCube1" "rotate" " -type \"double3\" 0 0 90.08239202165209747"
+		
+		2 "|Coffin:pCube1" "scale" " -type \"double3\" 0.34681299556503375 0.34681299556503375 0.34681299556503375"
+		
+		2 "|Coffin:pCube1" "rotatePivot" " -type \"double3\" -8.64786326482317236 18.81317040009015074 -0.0059769467997051202"
+		
+		2 "|Coffin:pCube1" "rotatePivotTranslate" " -type \"double3\" 1.40564319068802313 -1.40362331079230884 0"
+		
+		2 "|Coffin:pCube1" "scalePivot" " -type \"double3\" -11.29144774810810858 18.81317040009015074 -0.0059769467997021763"
+		
+		2 "|Coffin:pCube1" "scalePivotTranslate" " -type \"double3\" 2.64358448328490692 0 0"
+		
+		2 "|Coffin:pCube2" "translate" " -type \"double3\" -1.5717370641241315 -10.47525375835920691 -9.69368868432507291"
+		
+		2 "|Coffin:pCube2" "rotate" " -type \"double3\" -4.02789091066092553 88.62122138773878532 83.77174183937285079"
+		
+		2 "|Coffin:pCube2" "scale" " -type \"double3\" 0.3215822230418669 0.3215822230418669 0.3215822230418669"
+		
+		2 "|Coffin:pCube2" "rotatePivotTranslate" " -type \"double3\" 0 0 0";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -507,7 +538,7 @@ select -ne :defaultShaderList1;
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
-	setAttr -s 4 ".r";
+	setAttr -s 5 ".r";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
@@ -515,7 +546,7 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 20 ".dsm";
+	setAttr -s 22 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 12 ".gn";
 select -ne :initialParticleSE;
